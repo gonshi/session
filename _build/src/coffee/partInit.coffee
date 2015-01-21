@@ -113,7 +113,7 @@ partInit = ->
   $( ".wrapper-part" ).show()
   partName = part.replace /[0-9]/, ""
   $( ".part" ).css
-    "background-image": "url('/img/part/#{ partName }.png')"
+    "background-image": "url('img/part/#{ partName }.png')"
   .show()
 
   audioRight.src = "audio/#{ getParam.music }/#{ part }-right.mp3"
