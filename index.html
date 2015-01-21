@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image:src" content="">
+    <link rel="stylesheet" href="css/main.css?v=01211359" media="screen, print">
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico?v=01211359">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico?v=01211359">
+    <!-- script(type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411")-->
+    <script src="http://cdn.mlkcca.com/v0.2.8/milkcocoa.js"></script><!--[if lte IE 9]>
+    <script src="js/lib/html5shiv.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="ttl"><img src="img/common/ttl.png" alt="セッション"></h1>
+      <p class="start">
+        <button><img src="img/common/start.png" alt="スタート"></button>
+      </p>
+      <div class="part_container">
+        <p class="part guitar"><img src="img/part/guitar-one.png" alt="ギター"></p>
+        <p class="part bass"><img src="img/part/bass-one.png" alt="ベース"></p>
+        <p class="part drum"><img src="img/part/drum-one.png" alt="ドラム"></p>
+        <p class="part vocal"><img src="img/part/vocal-one.png" alt="ボーカル"></p>
+        <p class="part piano"><img src="img/part/piano-one.png" alt="ピアノ"></p>
+        <p class="part conga"><img src="img/part/conga-one.png" alt="コンガ"></p>
+      </div>
+    </div>
+    <div class="wrapper-part">
+      <p class="part"></p>
+    </div>
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=1548831858693621&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>
+      window.twttr = (function (d,s,id) {
+        var t, js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+          js=d.createElement(s);
+          js.id=id;
+          js.src="https://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js, fjs);
+          return window.twttr || (t = {
+            _e: [],
+            ready: function(f){
+              t._e.push(f)
+            }
+          });
+      }(document, "script", "twitter-wjs"));
+    </script>
+    <script src="js/app.min.js?v=01211359"></script>
+  </body>
+</html>

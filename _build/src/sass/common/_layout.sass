@@ -1,0 +1,58 @@
+h1.ttl
+  $img: "common/ttl.png"
+  display: none
+  position: absolute
+  +trbl(0, auto, auto, 20px)
+  +image-size($img, 3.5)
+
+.wrapper
+  display: none
+  position: absolute
+  +trbl(0, 0, 0, 0)
+
+  .start
+    $img: "common/start.png"
+    position: absolute
+    +trbl(50%, 0, 0, 50%)
+    +image-size($img, 1.5)
+    +translate(-50%, -50%)
+    +transition(transform 0.5s ease 0s)
+
+    &:hover
+      +transform(translate(-50%, -50%) scale(1.1))
+
+  .part_container
+    display: none
+    position: absolute
+    +trbl(auto, 0, 40px, 0)
+    width: 100%
+    height: 360px
+    margin: auto
+    text-align: center
+    +clearfix
+
+    .part
+      display: inline-block
+
+.wrapper-part
+  display: none
+  position: absolute
+  +trbl(0, 0, 0, 0)
+  cursor: pointer
+  +user-select(none)
+  overflow: hidden
+
+  .part
+    $num: 2
+    $img: "part/drum.png"
+    display: none
+    position: absolute
+    +trbl(0, 0, 0, 0)
+    +bg($img, auto 200%, no-repeat)
+    @extend %hideText
+    +animation(switch 1s step-end 0s infinite)
+    +transition(transform 0.2s ease 0s)
+
+    &:active
+      +scale(1.2)
+
