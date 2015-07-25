@@ -39,7 +39,7 @@ partInit = ->
   ###
     EVENT LISTENER
   ###
-  sessionDataStore.on "push", ( e )->
+  sessionDataStore.on "send", ( e )->
     if e.value.event == "SYN" && !is_play
       is_play = true
       _currentTime = parseFloat( ( ( Date.now() -
@@ -69,7 +69,7 @@ partInit = ->
       if click_count % 4 == 0
         bpm = ( 1 / ( ( record_time[ record_time.length - 1 ] -
               record_time[ record_time.length - 4 ] ) / 4000 ) ) * 60
-        sessionDataStore.push
+        sessionDataStore.send
           event: "CHANGE_RHYTHM"
           bpm: bpm
 
@@ -97,7 +97,7 @@ partInit = ->
     audioLeft.volume = leftVolume
 
     if part == "guitar1" && window.screenLeft != 0
-      sessionDataStore.push
+      sessionDataStore.send
         event: "WINDOW_POS"
         left: window.screenLeft
 
@@ -121,7 +121,7 @@ partInit = ->
   audioRight.playbackRate = getParam.bpm / originalBpm
   audioLeft.playbackRate = getParam.bpm / originalBpm
 
-  sessionDataStore.push
+  sessionDataStore.send
     event: "PART_STARTED"
     part: part
 

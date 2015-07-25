@@ -10,7 +10,7 @@ $ ->
   ###
     DECLARATION
   ###
-  window.milkcocoa = new window.MilkCocoa "https://io-hi568gcqw.mlkcca.com:443"
+  window.milkcocoa = new window.MilkCocoa "iceia90idbv.mlkcca.com"
   window.sessionDataStore = milkcocoa.dataStore "session"
 
   if window._DEBUG

@@ -49,19 +49,19 @@ indexInit = ->
   ###
     EVENT LISTENER
   ###
-  sessionDataStore.on "push", ( e )->
+  sessionDataStore.on "send", ( e )->
     if e.value.event == "PART_STARTED"
       if !is_started
         # 時間計測のため
         is_started = true
         audio.volume = 0
         audio.play()
-      sessionDataStore.push
+      sessionDataStore.send
         event: "SYN"
         startTime: Date.now() - audio.currentTime * 1000
     else if e.value.event == "CHANGE_RHYTHM"
       selected_bpm = e.value.bpm
-      sessionDataStore.push
+      sessionDataStore.send
         event: "DISPATCH_RHYTHM"
         bpm: selected_bpm
 
